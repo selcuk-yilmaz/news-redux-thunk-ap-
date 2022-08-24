@@ -14,11 +14,11 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
-  const currentUser = true;
+  // const currentUser = true;
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
-  console.log(currentUser);
+  // console.log(currentUser);
 
   const handleGoogleSingIn = () => {
     loginWithGoogle();

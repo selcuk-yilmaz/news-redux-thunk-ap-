@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../utils/firebaseUtil";
+import { clearCurrentUser } from "../redux/actions/authActions";
+import { useDispatch, useSelector } from "react-redux";
 
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -14,8 +16,10 @@ import Menu from "@mui/material/Menu";
 
 const MyNavbar = () => {
   const navigate = useNavigate();
-  const currentUser = true;
+  // const currentUser = true;
+  const dispatch = useDispatch();
 
+  const { currentUser } = useSelector((state) => state.auth);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleMenu = (event) => {
@@ -30,12 +34,13 @@ const MyNavbar = () => {
   const handleLogout = () => {
     setAnchorEl(null);
     logout();
+    dispatch(clearCurrentUser());
   };
 
   const handleRegister = () => {
     navigate("/register");
   };
-
+  console.log(currentUser);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -63,7 +68,7 @@ const MyNavbar = () => {
                     marginRight: "1rem",
                   }}
                 >
-                  {currentUser?.displayName}
+                  {currentUser?.email}
                 </Typography>
                 <AccountCircle />
               </IconButton>
