@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
-// import appReducer from "./appReducer";
+import loadingReducer from "./loadingReducer";
 import newsReducer from "./newsReducer";
 // import authReducer from "./authReducer";
 
 const rootReducer = combineReducers({
-//   app: appReducer,
+  appLoading: loadingReducer,
   news: newsReducer,
-//   auth: authReducer,
+  //   auth: authReducer,
 });
 export default rootReducer;

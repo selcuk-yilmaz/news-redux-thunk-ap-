@@ -1,5 +1,5 @@
 import { setNewsList } from "../actions/newsActions";
-// import { setLoading, clearLoading } from "../actions/appActions";
+import { setLoading, clearLoading } from "../actions/loadingActions";
 import axios from "axios";
 
 const url =
@@ -13,14 +13,14 @@ const url =
 export const getNews = () => {
   return async (dispatch) => {
     try {
-      // dispatch(setLoading());
+      dispatch(setLoading());
       const { data } = await axios.get(url);
       dispatch(setNewsList(data.articles));
       console.log(data.articles);
     } catch (error) {
       console.log(error);
     } finally {
-      // dispatch(clearLoading());
+      dispatch(clearLoading());
     }
   };
 };
