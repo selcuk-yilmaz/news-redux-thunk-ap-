@@ -14,10 +14,9 @@ import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const navigate = useNavigate();
-  const currentUser = true;
+  // const currentUser = true;
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-
 
   const handleSingUp = () => {
     signup(email, password)
