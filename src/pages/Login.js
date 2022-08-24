@@ -11,14 +11,22 @@ import {
 
 import { login, loginWithGoogle } from "../utils/firebaseUtil";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Login = () => {
   const navigate = useNavigate();
   // const currentUser = true;
+  const { currentUser } = useSelector((state) => state.auth);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
   // console.log(currentUser);
+
+  useEffect(() => {
+    if (currentUser) {
+      navigate("/");
+    }
+  }, [currentUser, navigate]);
 
   const handleGoogleSingIn = () => {
     loginWithGoogle();
