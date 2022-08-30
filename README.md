@@ -1,29 +1,17 @@
-# Redux Nedir, Nasil Uygulanir Projesi
+## Live Link of the Project
 
-## `Kurulum`
+this API is mercenary api thus I didn't published.Yo can see gif
 
-```
-npm install veya yarn install
-```
+## Hi I’m Selçuk 👋. Welcome to my news-redux-thunk-api App ...
 
-## `Kullanilan Kutuphaneler`
+ The purpose of this project can use redux-thunk and get news from API...
 
-- `redux` :
-  State management kutuphanesidir. React'ten bagimsiz olarak baska platformlar ile de kullanilabilir.
-- `redux-thunk` : Redux ile birlikte thunk teknolojisini kullanabilmek icin kullanilan kutuphanedir.
-- `react-redux` : Redux kutuphanesi ile olusturulan `store` ile React'in haberlesebilmesi icin kullanilan kutuphanedir.
-- `axios` : API istekleri yapabilmek icin kullanilan kutuphanedir.
-- `react-router-dom` : Proje icerisinde farkli URL'ler olusturup bunlar arasinda gezinebilmeyi saglayan kutuphanedir.
+## Libraries and Technologies I use
 
-- `@mui/material-ui`
-- `@emotion/react`
-- `@emotion/styled`
-- `firebase`
+ * React
+ * Bootstrap
+ * React thunk middleware
 
-## `Kullanilacak API`:
+## How does my project look
 
-- https://newsapi.org/
-
-## `Kullanilacak Araclar`
-
-- `Redux Dev Tools` : Chrome uzerinde calisan ve global state uzerinde yapilan tum degisikliklerin takip edilmesini saglayan tarayici uzantisidir. Indirmek icin [tiklayiniz.](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?utm_source=chrome-ntp-icon)`
+![news-redux-thunk-API](https://user-images.githubusercontent.com/99830247/187337241-4d7fe24d-5131-435b-8081-ffdf98a4737e.gif)
